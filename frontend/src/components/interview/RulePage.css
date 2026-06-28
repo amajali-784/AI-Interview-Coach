@@ -1,0 +1,256 @@
+/* Base styles for the rule page */
+.rule-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Container for the content with reduced padding for more width */
+  .rule-page .container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 60px 10px; /* 1cm gap from edges (10px as an approximation for 1cm) */
+    max-width: 100%; /* Remove max-width restriction for more width */
+    width: 100%; /* Ensures container takes full width */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  /* Hover effect for the container */
+  .rule-page .container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Greeting message */
+  .rule-page .greeting {
+    font-size: 40px;
+    color: #4f81e7;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Instructions text */
+  .rule-page .instructions {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.3; /* Further reduced line-height for tighter spacing */
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Updated rules list: two columns layout with wider columns */
+  .rule-page .rules-list {
+    list-style-type: decimal;
+    padding-left: 0;
+    margin-bottom: 40px;
+    color: #444;
+    font-size: 18px;
+    line-height: 1.2; /* Further reduced line height for tighter spacing between lines */
+    animation: fadeIn 2s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Columns now at least 400px wide */
+    gap: 40px; /* Increased gap between columns */
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Styling for each rule in the list */
+  .rule-page .rules-list li {
+    margin-bottom: 5px; /* Reduced margin-bottom to save space */
+    color: #555;
+    font-size: 18px;
+    line-height: 1.2; /* Further reduced line height for tighter spacing */
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  /* Hover effect for each rule */
+  .rule-page .rules-list li:hover {
+    color: #4f81e7;
+    font-weight: bold;
+    transform: translateX(5px);
+  }
+  
+  /* Input section styles */
+  .rule-page .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    animation: fadeIn 2.5s ease-in-out;
+  }
+  
+  /* Input label styles */
+  .rule-page .input-label {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  /* Input field styles */
+  .rule-page .input-field {
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s ease-in-out, transform 0.2s ease;
+  }
+  
+  /* Input focus styles */
+  .rule-page .input-field:focus {
+    border-color: #4f81e7;
+    box-shadow: 0 0 10px rgba(79, 129, 231, 0.5);
+    transform: scale(1.05);
+  }
+  
+  /* Button styles */
+  .rule-page .start-button,
+  .rule-page .logout-button {
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Start button specific styles */
+  .rule-page .start-button {
+    background-color: #4f81e7;
+    color: white;
+  }
+  
+  .rule-page .start-button:hover {
+    background-color: #3565a5;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logout button specific styles */
+  .rule-page .logout-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .rule-page .logout-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Loading message */
+  .rule-page p {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+    font-weight: 500;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1680px) {
+    .rule-page .container {
+      padding: 30px;
+      max-width: 1200px;
+    }
+  
+    .rule-page .greeting {
+      font-size: 32px;
+    }
+  
+    .rule-page .instructions {
+      font-size: 18px;
+    }
+  
+    .rule-page .input-field {
+      padding: 12px;
+      font-size: 15px;
+    }
+  
+    .rule-page .start-button,
+    .rule-page .logout-button {
+      padding: 12px 18px;
+      font-size: 16px;
+    }
+  
+    .rule-page .rules-list {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .rule-page .container {
+      padding: 20px;
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rule-page .container {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
+    .rule-page .greeting {
+      font-size: 28px;
+    }
+  
+    .rule-page .instructions {
+      font-size: 16px;
+    }
+  
+    .rule-page .input-field {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .rule-page .start-button,
+    .rule-page .logout-button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  
+    .rule-page .rules-list {
+      font-size: 14px;
+      grid-template-columns: 1fr;
+    }
+  }
+  

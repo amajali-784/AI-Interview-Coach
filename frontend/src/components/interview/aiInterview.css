@@ -1,0 +1,96 @@
+.ai-interview-wrapper {
+  width: 80%;
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ai-interview-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.input-label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-select,
+.form-input,
+.form-textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.form-select:focus,
+.form-input:focus,
+.form-textarea:focus {
+  outline-color: #007bff;
+  border-color: #007bff;
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.file-info {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.file-info-text {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .ai-interview-wrapper {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 1.6rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+}

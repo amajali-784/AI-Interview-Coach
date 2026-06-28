@@ -1,0 +1,237 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content-wrapper h1 {
+  color: red;
+}
+
+/* Light Theme */
+.dashboard-wrapper.light {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Dark Theme */
+.dashboard-wrapper.dark {
+  background-color: #2e2929;
+  color: #f4f4f9;
+}
+
+/* Header */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color:#003a75;
+  color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.platform-purpose-banneras {
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border: 2px solid #0077b6; /* Border color to match theme */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Inner spacing */
+  margin: 20px auto; /* Center alignment with spacing */
+  max-width: 800px; /* Maximum width for better readability */
+  text-align: center; /* Center text alignment */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.platform-purpose-banneras h2 {
+  color: #0077b6; /* Theme accent color */
+  font-size: 1.8rem; /* Heading size */
+  margin-bottom: 10px; /* Space below the heading */
+  font-weight: 600; /* Bold font weight */
+}
+
+.platform-purpose-banneras p {
+  color: #333; /* Darker text for readability */
+  font-size: 1rem; /* Standard paragraph size */
+  line-height: 1.6; /* Line spacing for readability */
+}
+
+.platform-purpose-banneras strong {
+  color: #d90429; /* Red for emphasizing "cheating is prohibited" */
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .platform-purpose-banneras {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .platform-purpose-banneras h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .platform-purpose-banneras p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+}
+
+.menu-toggle {
+  margin-right: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.login-btn,
+.logout-btn {
+  background-color: #005bb5;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover,
+.logout-btn:hover {
+  background-color: #004494;
+}
+
+/* Sidebar */
+.sidebar-container {
+  position: fixed;
+  top: 70px; /* Adjust this value based on your header height */
+  left: 0;
+  width: 250px;
+  height: calc(150vh - 6px - 60px); /* Subtract header and footer heights */
+  background-color: #003a75;
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+.sidebar-container.open {
+  transform: translateX(0);
+}
+
+.sidebar-navigation {
+  margin: 20px;
+}
+
+.sidebar-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-navigation li {
+  margin: 15px 0;
+}
+
+.sidebar-navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-navigation a:hover {
+  background-color: #005bb5;
+}
+
+/* Main Content */
+.main-content-wrapper {
+  margin-left: 250px;
+  padding: 20px;
+  flex: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-container.closed + .main-content-wrapper {
+  margin-left: 0;
+}
+
+.welcome-message {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.profile-summary p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.profile-summary strong {
+  font-weight: bold;
+  color: #0078d7;
+}
+
+/* Footer */
+.footer-wrapper {
+  text-align: center;
+  padding: 15px;
+  background-color: #003a75;
+  color: white;
+  margin-top: auto;
+  font-size: 0.9em;
+  box-shadow: 0px -2px 5px rgba(155, 129, 129, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sidebar-container {
+    width: 200px;
+  }
+
+  .main-content-wrapper {
+    margin-left: 0;
+  }
+
+  .welcome-message {
+    font-size: 1.5em;
+  }
+
+  .sidebar-navigation a {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}

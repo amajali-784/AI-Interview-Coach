@@ -1,0 +1,180 @@
+/* Main Container */
+.admin-job-app-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .admin-job-app-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Heading Styles */
+  .admin-job-app-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .admin-job-app-container h2:hover {
+    color: #4caf50; /* Green color on hover */
+  }
+  
+  /* Form Styles */
+  .admin-job-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .admin-job-form input,
+  .admin-job-form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .admin-job-form input:focus,
+  .admin-job-form textarea:focus {
+    border-color: #4caf50; /* Green focus border */
+  }
+  
+  .admin-job-form button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .admin-job-form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Button scale on hover */
+  }
+  
+  .admin-job-form button:active {
+    transform: scale(1); /* Button returns to original size on click */
+  }
+  
+  /* Feedback Message */
+  .feedback-message {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .feedback-message.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .feedback-message.success {
+    color: #28a745;
+    background-color: #d4edda;
+  }
+  
+  .feedback-message.error {
+    color: #dc3545;
+    background-color: #f8d7da;
+  }
+  
+  /* Job Table Styles */
+  .job-table {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .job-table th,
+  .job-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  .job-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .job-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .job-table button {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .job-table button:hover {
+    background-color: #c82333;
+    transform: scale(1.05); /* Button scale on hover */
+  }
+  
+  .job-table button:active {
+    transform: scale(1); /* Button returns to original size on click */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .admin-job-app-container {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .admin-job-form {
+      gap: 10px;
+    }
+  
+    .job-table th,
+    .job-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .admin-job-form input,
+    .admin-job-form textarea,
+    .admin-job-form button {
+      width: 100%;
+    }
+  
+    .feedback-message {
+      font-size: 14px;
+    }
+  }
+  

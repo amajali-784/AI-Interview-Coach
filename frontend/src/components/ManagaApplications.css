@@ -1,0 +1,57 @@
+/* Custom class for full-page coverage */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Take up the full viewport height */
+    width: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff5733); /* Background gradient */
+    text-align: center;
+    margin: 0; /* Ensures there's no default margin around the page */
+  }
+  
+  /* Content box for the construction message */
+  .construction-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 500px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Animation for a smooth fade-in effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Icon for construction */
+  .construction-icon {
+    font-size: 60px;
+    color: #ff5733;
+    margin-bottom: 20px;
+  }
+  
+  /* Title text */
+  .construction-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Message text styling */
+  .construction-message {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  

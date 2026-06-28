@@ -1,0 +1,56 @@
+/* Admin Feedback Page Styles */
+.admin-feedback-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .admin-feedback-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-feedback-chart-container {
+    width: 70%;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-feedback-notes-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .admin-feedback-notes-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .admin-feedback-note {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-style: italic;
+  }
+  
+  .admin-feedback-no-notes {
+    color: #777;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+  }
+  

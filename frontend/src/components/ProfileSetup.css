@@ -1,0 +1,119 @@
+/* Container for Profile Setup Form */
+.form-contain {
+  background: #ffffff;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 50px auto;
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #333;
+}
+
+/* Form Heading Styles */
+h2 {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Step Indicator Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Label Styles */
+label {
+  font-size: 1.1em;
+  font-weight: 600;
+  display: block;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Input and Select Styles */
+input,
+select {
+  padding: 12px 14px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Dynamic "Other" Input Styling */
+input.other-input {
+  border-color: #ffc107;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px;
+  font-size: 1.1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Step Number Display */
+.step-indicator {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .form-contain {
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  button {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,138 @@
+/* AdminCoursePage.css */
+
+/* General Styles */
+.admin-page-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7fafc;
+  padding: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.admin-page-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d3b47;
+  margin-bottom: 30px;
+}
+
+/* Form Styles */
+.course-add-form-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.course-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.course-input,
+.course-textarea,
+.course-file {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #555;
+  background-color: #f8f8f8;
+}
+
+.course-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-course-btn {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.submit-course-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Table Styles */
+.courses-table-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.available-courses-heading {
+  font-size: 2rem;
+  color: #2d3b47;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.courses-table th,
+.courses-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.courses-table th {
+  background-color: #f1f1f1;
+  color: #2d3b47;
+  font-size: 1.1rem;
+}
+
+.courses-table td {
+  font-size: 1rem;
+  color: #555;
+}
+
+.courses-table a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.courses-table a:hover {
+  color: #2980b9;
+}
+
+.delete-course-btn {
+  padding: 6px 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-course-btn:hover {
+  background-color: #c0392b;
+}
+
+.courses-table tr:hover {
+  background-color: #f9fafb;
+}
